@@ -4,6 +4,9 @@
     font-family: 'Orbitron', sans-serif;
 }
 
+body{
+    background-color: lavenderblush;
+}
 
 
 h4 {
@@ -31,16 +34,18 @@ h1 {
     padding: 2px;
     text-align: center;
     width:400px;
+    background-color: pink;
 }
 
 .player2 {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 1px solid red;
+    border: 1px solid blue;
     padding: 2px;
     text-align: center;
     width:400px;
+    background-color: lightblue;
 }
 
 .current{
@@ -53,6 +58,8 @@ button{
     border-radius: 10%;
     margin: 10px;
     width: 150px;
+    background-color: lavenderblush;
+
 }
 
 #image{
