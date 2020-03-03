@@ -23,7 +23,7 @@ const image = document.getElementById("image")
 rollBtn.addEventListener("click", () =>{
     let ranNum = Math.floor(Math.random() *6) +1;
     if (ranNum == 1){
-        name1.innerText = "You rolled 1!";
+        headerInfo.innerText = "You rolled 1!";
         roll.style.display = "none";
         hold.style.display = "none";
         nextPlayer.style.display = "";
@@ -75,13 +75,13 @@ const winning = () =>{
         roll.style.display = "none";
         hold.style.display = "none";
         nextPlayer.style.display = "none";
-        name1.innerText = "Winner!!";
+        headerInfo.innerText = "Player 1 wins!!!";
     }
     else if (total2 >20){
         roll.style.display = "none";
         hold.style.display = "none";
         nextPlayer.style.display = "none";
-        name2.innerText = "Winner!!";
+        headerInfo.innerText = "Player 2 wins!!";
  }
 }
 
@@ -95,6 +95,7 @@ nextBtn.addEventListener("click", () => {
     current2 = 0;
     currentResult1.innerText = current1;
     currentResult2.innerText = current2;
+    headerInfo.innerText = " ";
     if (activePlayer == 1){
         activePlayer = 2
     }
@@ -111,8 +112,7 @@ newgameBtn.addEventListener("click", () =>{
     current2 = 0;
     total1 = 0;
     total2 = 0;
-    name1.innerText = "Player 1";
-    name2.innerText = "Player 2";
+    headerInfo.innerText = " ";
     currentResult1.innerText = current1;
     currentResult2.innerText = current2;
     totalResult1.innerText = total1;

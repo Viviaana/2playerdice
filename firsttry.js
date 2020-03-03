@@ -37,7 +37,7 @@ roll1.addEventListener("click", () =>{
     let ranNum = Math.floor(Math.random() *6) +1;
     p1Current += ranNum;
     if (ranNum == 1){
-        name1.innerText = "You rolled 1!";
+        infoHeader.innerText = "You rolled 1!";
         roll1.style.display = "none";
         hold.style.display = "none";
         nextPlayer.style.display = "";
@@ -51,7 +51,7 @@ roll2.addEventListener("click", () =>{
     let ranNum = Math.floor(Math.random() *6) +1;
     p2Current += ranNum;
     if (ranNum == 1){
-        name2.innerText = "You rolled 1!";
+        infoHeader.innerText = "You rolled 1!";
         roll2.style.display = "none";
         hold.style.display = "none";
         nextPlayer.style.display = "";
@@ -72,8 +72,6 @@ hold.addEventListener("click", () =>{
 })
 
 nextPlayer.addEventListener("click", () =>{
-    name1.innerText = "Player 1";
-    name2.innerText = "Player 2";
     p1Sum += p1Current;
     p2Sum += p2Current;
     p1Current = 0;
@@ -82,6 +80,7 @@ nextPlayer.addEventListener("click", () =>{
     p2total.innerText = `${p2Current}`;
     hold.style.display = "";
     nextPlayer.style.display="none";
+    infoHeader.innerText = ""
     swapReset();
 })
 
@@ -95,6 +94,5 @@ newGame.addEventListener("click", ()=>{
     roll2.style.display = "none";
     hold.style.display = "";
     current1.innerText = `${p1Current}`;
-    name1.innerText = "Player 1";
-    name2.innerText = "Player 2";
+    infoHeader.innerText = ""
 })
